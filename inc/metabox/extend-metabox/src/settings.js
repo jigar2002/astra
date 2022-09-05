@@ -25,7 +25,6 @@ const MetaSettings = props => {
 
 	const is_hide_sidebar = astMetaParams.is_hide_sidebar;
 	const is_hide_contnet_layout = astMetaParams.is_hide_contnet_layout;
-
 	// Adjust spacing & borders for table.
 	const topTableSpacing = <tr className="ast-extra-spacing"><td className="ast-border"></td><td></td></tr>;
 	const bottomTableSpacing = <tr className="ast-extra-spacing ast-extra-spacing-bottom"><td className="ast-border"></td><td></td></tr>;
