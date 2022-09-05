@@ -23,9 +23,6 @@ const MetaSettings = props => {
     const openModal = () => setOpen( true );
     const closeModal = () => setOpen( false );
 
-	const is_hide_sidebar = astMetaParams.is_hide_sidebar;
-	const is_hide_contnet_layout = astMetaParams.is_hide_contnet_layout;
-
 	// Adjust spacing & borders for table.
 	const topTableSpacing = <tr className="ast-extra-spacing"><td className="ast-border"></td><td></td></tr>;
 	const bottomTableSpacing = <tr className="ast-extra-spacing ast-extra-spacing-bottom"><td className="ast-border"></td><td></td></tr>;
@@ -110,10 +107,10 @@ const MetaSettings = props => {
 				title={ astMetaParams.title }
 			>
 
-			<div className="ast-sidebar-container components-panel__body is-opened" id="astra_settings_meta_box">
+				<div className="ast-sidebar-container components-panel__body is-opened" id="astra_settings_meta_box">
 
 					{/* Content Layout Setting */}
-					{ !is_hide_contnet_layout && (<PanelBody
+					<PanelBody
 						title={ __( 'Content Layout', 'astra' ) }
 						initialOpen={ true }
 					>
@@ -128,11 +125,8 @@ const MetaSettings = props => {
 							/>
 						</div>
 					</PanelBody>
-					)}
 
-					{/* Sidebar Setting */ }
-
-					{ !is_hide_sidebar && (
+					{/* Sidebar Setting */}
 					<PanelBody
 						title={ __( 'Sidebar', 'astra' ) }
 						initialOpen={ false }
@@ -148,7 +142,6 @@ const MetaSettings = props => {
 							/>
 						</div>
 					</PanelBody>
-					)}
 
 					{/* Disable Section Setting */}
 					<PanelBody

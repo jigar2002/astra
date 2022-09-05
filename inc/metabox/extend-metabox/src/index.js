@@ -10,6 +10,7 @@ import {compose} from "@wordpress/compose";
 import {addFilter} from "@wordpress/hooks";
 
 const { __ } = wp.i18n;
+
 if( astMetaParams.register_astra_metabox ) {
 	registerPlugin( 'astra-theme-layout', { render: MetaSettings } );
 	class HideFeaturedImage extends Component {
